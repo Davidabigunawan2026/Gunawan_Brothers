@@ -1,0 +1,323 @@
+/* ==================================================
+   TECHNOLOGIES — SKILLS SHOWCASE
+   ================================================== */
+
+    body {
+        outline: 5px solid red;
+    }
+
+
+/* ==============================================
+   TECHNOLOGIES SECTION
+============================================== */
+
+.technologies-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 5% 120px;
+    overflow: hidden;
+}
+
+
+/* ==============================================
+   SECTION HEADING
+============================================== */
+
+.technologies-heading {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 70px;
+}
+
+
+.technologies-heading .section-label {
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.technologies-heading h2 {
+    margin: 0 0 18px;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 600;
+}
+
+
+.technologies-heading p {
+    margin: 0 auto;
+    max-width: 700px;
+    color: #94A3B8;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==============================================
+   TECHNOLOGY GROUP
+============================================== */
+
+.technology-group {
+
+    max-width: 1150px;
+    margin: 0 auto 65px;
+
+}
+
+
+/* ==============================================
+   CATEGORY TITLE
+============================================== */
+
+.technology-group h3 {
+
+    margin: 0 0 28px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #5EEAD4;
+
+}
+
+
+/* ==============================================
+   TECHNOLOGY GRID
+============================================== */
+
+.technology-grid {
+
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 15px;
+
+    justify-content: center;
+
+}
+
+
+/* ==============================================
+   TECHNOLOGY CARD
+============================================== */
+
+.technology-card {
+
+    position: relative;
+    min-height: 60px;
+    min-width: 70px;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 16px;
+
+    background:
+        rgba(15, 23, 42, 0.55);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+
+    cursor: pointer;
+}
+
+
+/* ==============================================
+   TECHNOLOGY LOGO
+============================================== */
+
+.technology-card img {
+
+    width: 75px;
+
+    height: 75px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+
+/* ==============================================
+   TECHNOLOGY TITLE
+============================================== */
+
+.technology-card h4 {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    color: #FFFFFF;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==============================================
+   HOVER CARD
+============================================== */
+
+.technology-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(94, 234, 212, 0.45);
+
+    background:
+        rgba(15, 23, 42, 0.8);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==============================================
+   HOVER LOGO
+============================================== */
+
+.technology-card:hover img {
+
+    transform:
+        scale(1.12);
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(94, 234, 212, 0.45)
+        );
+}
+
+
+/* ==============================================
+   FRONT END / BACK END ETC.
+============================================== */
+
+.technology-group:nth-of-type(1) h3 {
+    color: #38BDF8;
+}
+
+
+.technology-group:nth-of-type(2) h3 {
+    color: #5EEAD4;
+}
+
+
+.technology-group:nth-of-type(3) h3 {
+    color: #A78BFA;
+}
+
+
+.technology-group:nth-of-type(4) h3 {
+    color: #FBBF24;
+}
+
+
+/* ==============================================
+   TABLET
+============================================== */
+
+@media (max-width: 900px) {
+
+    .technology-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* ==============================================
+   MOBILE
+============================================== */
+
+@media (max-width: 600px) {
+
+    .technologies-section {
+
+        padding:
+            80px 20px 90px;
+
+    }
+
+
+    .technologies-heading {
+        margin-bottom: 50px;
+    }
+
+
+    .technology-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .technology-group {
+        margin-bottom: 50px;
+    }
+
+
+    .technology-group h3 {
+
+        font-size: 15px;
+        margin-bottom: 20px;
+
+    }
+
+
+    .technology-card {
+
+        min-height: 150px;
+        padding: 20px 10px;
+
+    }
+
+
+    .technology-card img {
+
+        width: 60px;
+        height: 60px;
+        margin-bottom: 14px;
+
+    }
+
+
+    .technology-card h4 {
+        font-size: 14px;
+    }
+
+}
+

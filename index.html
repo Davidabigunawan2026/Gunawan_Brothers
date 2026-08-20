@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gunawan Brothers | Web Development & Digital Solutions</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brochure.css">
+    <link rel="stylesheet" href="css/technologies.css">
+
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+        CUSTOM CURSOR
+    ========================================== -->
+
+    <div class="cursor"></div>
+
+    <svg class="cursor-thread">
+        <path id="threadPath"></path>
+    </svg>
+
+
+    
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+
+            <div class="logo-mark">
+                <img
+                    src="images/logo.png"
+                    alt="Gunawan Brothers Logo"
+                >
+            </div>
+
+            <div class="logo-text">
+                <span>GUNAWAN BROTHERS</span>
+                <small>WEB DEVELOPMENT & DIGITAL SOLUTIONS</small>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#technologies">TECHNOLOGIES</a>
+            <a href="#contact">CONTACT</a>
+
+        </nav>
+
+
+        <!-- Get In Touch -->
+        <a href="#contact" class="nav-button">
+
+            <i class="fa-regular fa-message"></i>
+
+            <span>GET IN TOUCH</span>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO SECTION
+    ========================================== -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <!-- Background Video -->
+            <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline>
+
+                <source src="river_mountain.mp4" type="video/mp4">
+
+            </video>
+
+
+            <!-- Dark Overlay -->
+            <div class="hero-overlay"></div>
+
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    WE BUILD SOLUTIONS
+                </span>
+
+                <h1>
+                    We Build Digital
+                    <span>Solutions</span>
+                    That Drive Your Business
+                </h1>
+
+                <p>
+                    Gunawan Brothers is a trusted partner
+                    for modern digital solutions, business applications,
+                    and reliable database systems.
+                </p>
+
+
+                <!-- Hero Buttons -->
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        EXPLORE OUR WORK
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#services" class="btn btn-outline">
+                        OUR SERVICES
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+
+                <span>SCROLL TO EXPLORE</span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             ABOUT SECTION
+        ========================================== -->
+
+        <section id="about" class="section about-section">
+
+            <canvas id="aboutCanvas"></canvas>
+
+            <div class="container about-content">
+
+                <div class="section-label">
+                    ABOUT US
+                </div>
+
+                <h2>
+                    Building Digital Solutions
+                    <br>
+                    That Matter
+                </h2>
+
+                <p>
+                    Gunawan Brothers is dedicated to helping companies
+                    and organizations achieve digital transformation
+                    through modern web technology, business applications,
+                    and effective information systems.
+                </p>
+            </div>
+        </section>
+
+
+
+        <!-- =========================================
+            SERVICES SECTION
+        ========================================== -->
+
+        <section id="services" class="section services-section">
+
+            <!-- Animated Background -->
+            <canvas id="servicesCanvas"></canvas>
+
+            <!-- Content -->
+            <div class="container services-content">
+
+                <span class="section-label">
+                    OUR SERVICES
+                </span>
+
+                <h2>
+                    Digital Solutions
+                    <br>
+                    For Your Business
+                </h2>
+
+                <p>
+                    We create tailored digital solutions that combine modern technology,
+                    business expertise, and thoughtful design to help your organization grow.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    <!-- =========================================
+        PROJECTS SECTION
+    ========================================== -->
+
+    <section id="projects" class="section projects-section">
+
+        <!-- Soft background -->
+        <div class="projects-blur"></div>
+
+        <!-- Section Title -->
+        <div class="projects-heading">
+
+            <span class="section-label">
+                OUR PROJECTS
+            </span>
+
+            <h2>
+                Selected Works
+            </h2>
+
+            <p>
+                Explore a selection of our digital projects, where strategic thinking,
+                modern technology, and refined design come together.
+            </p>
+
+        </div>
+
+    <!-- =====================================
+        PROJECTS EXPERIENCE
+    ====================================== -->
+
+    <div class="projects-stage">
+
+        <div class="project-showcase">
+
+            <!-- =================================
+                DESK
+            ================================== -->
+
+            <div class="projects-stage">
+
+                <div class="project-showcase">
+
+                        <!-- DESK -->
+                    <div class="project-desk">
+
+                        <!-- DESK IMAGE + LAPTOP SCREEN -->
+
+                        <div class="desk-image">
+
+                            <!-- Laptop screen clickable area -->
+
+                            <div class="laptop-screen-hotspot">
+                                <br><br>    
+                                <img 
+                                src="images/gb_meja_2.png" 
+                                alt="Gunawan Brothers Project Desk"
+                            >
+                            </div>
+
+                        </div>
+
+
+                        <!-- Folder / Papers -->
+
+                        <div class="project-folder">
+
+                            <div class="project-paper paper-back"></div>
+                            <div class="project-paper paper-middle"></div>
+                            <div class="project-paper paper-front">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                <!-- PROJECT PREVIEW  -->    
+                <div class="project-preview">
+
+                    <div class="preview-track">
+
+                        <img
+                            class="preview-slide"
+                            src="images/project_rumah.png"
+                            alt="Project Rumah"
+                        >
+
+                        <img
+                            class="preview-slide"
+                            src="images/project_pabrik.png"
+                            alt="Project Pabrik"
+                        >
+
+                        <img
+                            class="preview-slide"
+                            src="images/project_mobil.png"
+                            alt="Project Rumah"
+                        >
+
+                        <img
+                            class="preview-slide"
+                            src="images/project_villa.png"
+                            alt="Project Rumah"
+                        >
+
+                        <img
+                            class="preview-slide"
+                            src="images/project_hotel.png"
+                            alt="Project Rumah"
+                        >
+
+                        <img
+                            class="preview-slide"
+                            src="images/project_bank.png"
+                            alt="Project Rumah"
+                        >
+
+                        <img
+                            class="preview-slide"
+                            src="images/project_hospital.png"
+                            alt="Project Rumah"
+                        >
+
+                        <img
+                            class="preview-slide"
+                            src="images/project_resto.png"
+                            alt="Project Rumah"
+                        >
+                        
+                        <!-- Gambar  Clone -->
+                        <img
+                            class="preview-slide"
+                            src="images/project_rumah.png"
+                            alt="Project Rumah"
+                        >
+
+
+
+                        
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!------  BROSURE  ------>
+        <div class="brochure-carousel">
+            <div class="brochure-track">
+
+                <img src="images/brosur_gb.png">
+                <img src="images/brosur_makanan.png">
+                <img src="images/brosur_mobil.png">
+                <img src="images/brosur_pantai.png">
+                <img src="images/brosur_melasti.png">
+                <img src="images/brosur_uluwatu.png">
+
+            </div>
+        </div>
+
+        <div class="brochure-modal">
+            <button class="brochure-close">
+                ×
+            </button>
+            <img id="brochureLargeImage">
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+        <!-- =========================================
+             TECHNOLOGIES SECTION
+        ========================================== -->
+
+        <section id="technologies" class="section technologies-section">
+
+            <!-- Section Heading -->
+            <div class="technologies-heading">
+                <span class="section-label">
+                    TECHNOLOGIES
+                </span>
+                <h2>
+                    Technologies We Use
+                </h2>
+                <p>
+                    Modern technologies used to build reliable,
+                    scalable, and engaging digital solutions.
+                </p>
+            </div>
+
+
+            <!-- =====================================
+                FRONT END
+            ====================================== -->
+
+            <div class="technology-group">
+                <h3>
+                    FRONT END
+                </h3>
+
+                <div class="technology-grid">
+                    <!-- HTML -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/html5.png"
+                            alt="HTML5"
+                        >
+                        <h4>
+                            HTML5
+                        </h4>
+                    </div>
+
+
+                    <!-- CSS -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/css3.png"
+                            alt="CSS3"
+                        >
+                        <h4>
+                            CSS3
+                        </h4>
+                    </div>
+
+
+                    <!-- JavaScript -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/javascript.png"
+                            alt="JavaScript"
+                        >
+                        <h4>
+                            JavaScript
+                        </h4>
+                    </div>
+
+
+                    <!-- React -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/react.png"
+                            alt="React"
+                        >
+                        <h4>
+                            React
+                        </h4>
+                    </div>
+
+
+                    <!-- JSX -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/jsx.png"
+                            alt="JSX"
+                        >
+                        <h4>
+                            JSX
+                        </h4>
+                    </div>
+
+
+                    <!-- Vue -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/vue.png"
+                            alt="Vue.js"
+                        >
+                        <h4>
+                            Vue.js
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- =====================================
+                BACK END
+            ====================================== -->
+
+            <div class="technology-group">
+                <h3>
+                    BACK END
+                </h3>
+
+                <div class="technology-grid">
+                    <!-- Node -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/nodejs.png"
+                            alt="Node.js"
+                        >
+                        <h4>
+                            Node.js
+                        </h4>
+                    </div>
+
+
+                    <!-- Express -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/express.png"
+                            alt="Express.js"
+                        >
+                        <h4>
+                            Express.js
+                        </h4>
+                    </div>
+
+
+                    <!-- Python -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/python.png"
+                            alt="Python"
+                        >
+                        <h4>
+                            Python
+                        </h4>
+                    </div>
+
+
+                    <!-- REST API -->
+                    <div class="technology-card">
+
+                        <img
+                            src="images/tech/rest-api.png"
+                            alt="REST API"
+                        >
+                        <h4>
+                            REST API
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- =====================================
+                DATABASE
+            ====================================== -->
+
+            <div class="technology-group">
+                <h3>
+                    DATABASE
+                </h3>
+
+                <div class="technology-grid">
+                    <!-- SQLite -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/sqlite.png"
+                            alt="SQLite"
+                        >
+                        <h4>
+                            SQLite
+                        </h4>
+                    </div>
+
+
+                    <!-- MySQL -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/mysql.png"
+                            alt="MySQL"
+                        >
+                        <h4>
+                            MySQL
+                        </h4>
+                    </div>
+
+
+                    <!-- PostgreSQL -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/postgresql.png"
+                            alt="PostgreSQL"
+                        >
+                        <h4>
+                            PostgreSQL
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- =====================================
+                TOOLS & CMS
+            ====================================== -->
+
+            <div class="technology-group">
+                <h3>
+                    TOOLS & CMS
+                </h3>
+
+                <div class="technology-grid">
+
+                    <!-- Git -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/git.png"
+                            alt="Git"
+                        >
+                        <h4>
+                            Git
+                        </h4>
+                    </div>
+
+
+                    <!-- GitHub -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/github.png"
+                            alt="GitHub"
+                        >
+                        <h4>
+                            GitHub
+                        </h4>
+                    </div>
+
+
+                    <!-- VS Code -->
+                    <div class="technology-card">
+
+                        <img
+                            src="images/tech/vscode.png"
+                            alt="VS Code"
+                        >
+                        <h4>
+                            VS Code
+                        </h4>
+
+                    </div>
+
+
+                    <!-- npm -->
+                    <div class="technology-card">
+                        <img
+                            src="images/tech/npm.png"
+                            alt="npm"
+                        >
+                        <h4>
+                            npm
+                        </h4>
+                    </div>
+
+
+                    <!-- WordPress -->
+
+                    <div class="technology-card">
+
+                        <img
+                            src="images/tech/wordpress.png"
+                            alt="WordPress"
+                        >
+                        <h4>
+                            WordPress
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+        <!-- =========================================
+             CONTACT SECTION
+        ========================================== -->
+
+        <section id="contact" class="section">
+
+            <div class="container">
+
+                <span class="section-label">
+                    CONTACT
+                </span>
+
+                <h2>
+                    Let's Build Something
+                    <br>
+                    Great Together
+                </h2>
+                <p> 
+                    WA : +62811378356
+                    <br>
+                    Email : davidabigunawan2017@gmail.com
+                </p>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+        <!-- =========================================
+            AMBIENT SOUND
+        ========================================== -->
+
+        <audio
+            id="ambientAudio"
+            src="river_three_birds.mp3"
+            loop
+        ></audio>
+
+        <button
+            id="ambientToggle"
+            class="ambient-toggle"
+            aria-label="Play ambient sound"
+        >
+            ▶
+        </button>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            GUNAWAN BROTHERS
+        </div>
+
+        <p>
+            Web Development & Digital Solutions
+        </p>
+
+        <p class="copyright">
+            © 2026 Gunawan Brothers. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+
+
+    <!-- JavaScript -->
+    <script src="js/aboutWave.js"></script>
+    <script src="js/serviceWave.js"></script>
+    <script src="js/preview.js"></script>
+    <script src="js/brochure.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

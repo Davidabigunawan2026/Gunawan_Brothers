@@ -1,0 +1,971 @@
+/* ==================================================
+   GUNAWAN BROTHERS
+   PREMIUM CORPORATE WEBSITE
+================================================== */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #07100b;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+a {
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+.navbar {
+
+    position: fixed;
+    top: 18px;
+    left: 3%;
+    right: 3%;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    z-index: 1000;
+
+
+    /* =========================================
+       FULL TRANSPARENT NAVBAR
+       ========================================= */
+
+    background: transparent;
+
+    /* Gold border tetap */
+
+    border:
+        0px solid
+        rgba(210, 170, 75, 0.38);
+
+    border-radius: 28px;
+
+    /* Blur juga kita matikan */
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+
+    /* Shadow kita hilangkan */
+    box-shadow: none;
+}
+
+
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 330px;
+}
+
+
+.logo-mark {
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d9b45b;
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    letter-spacing: -2px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201, 163, 78, 0.12),
+            transparent 70%
+        );
+}
+
+
+.logo-text {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.logo-text span {
+
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #f2d17c;
+}
+
+
+.logo-text small {
+
+    font-size: 8px;
+    letter-spacing: 1.6px;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* ==================================================
+   NAV MENU
+================================================== */
+
+.nav-menu {
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.nav-menu a {
+
+    position: relative;
+    padding: 10px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.75);
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.nav-menu a:hover {
+
+    color: #f2cf72;
+    transform: translateY(-1px);
+}
+
+
+/* Active menu */
+
+.nav-menu a.active {
+    color: #f2cf72;
+}
+
+
+.nav-menu a.active::after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #d7ae50;
+
+    box-shadow:
+        0 0 8px rgba(215, 174, 80, 0.7);
+}
+
+
+/* ==================================================
+   GET IN TOUCH BUTTON
+================================================== */
+
+.nav-button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 150px;
+    height: 44px;
+    padding: 0 18px;
+    border: 1px solid rgba(215, 174, 80, 0.45);
+    border-radius: 25px;
+    color: #f1d078;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    background:
+        rgba(215, 174, 80, 0.04);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.nav-button:hover {
+
+    background:
+        rgba(215, 174, 80, 0.12);
+
+    border-color: #d7ae50;
+
+    transform: translateY(-2px);
+}
+
+
+.nav-button i {
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ==================================================
+   HERO VIDEO
+================================================== */
+
+.hero-video {
+
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+/* ==================================================
+   VIDEO OVERLAY
+================================================== */
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(4, 10, 6, 0.88) 0%,
+            rgba(4, 10, 6, 0.60) 35%,
+            rgba(4, 10, 6, 0.22) 70%,
+            rgba(4, 10, 6, 0.40) 100%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(4, 8, 5, 0.40),
+            transparent 35%,
+            rgba(4, 8, 5, 0.55)
+        );
+}
+
+
+/* ==================================================
+   HERO CONTENT
+================================================== */
+
+.hero-content {
+
+    position: relative;
+    z-index: 2;
+    width: min(650px, 90%);
+    margin-left: 10%;
+    margin-top: 70px;
+}
+
+
+.hero-label {
+
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #d9ad48;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+
+.hero h1 {
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 5.2vw, 78px);
+    line-height: 1.04;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #ffffff;
+
+    text-shadow:
+        0 4px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+.hero h1 span {
+    color: #d9ad48;
+}
+
+
+.hero-content p {
+
+    max-width: 580px;
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* ==================================================
+   HERO BUTTONS
+================================================== */
+
+.hero-buttons {
+
+    display: flex;
+    gap: 16px;
+    margin-top: 35px;
+}
+
+
+.btn {
+
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 25px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Primary */
+
+.btn-primary {
+
+    color: #11170f;
+    background: #dcb65e;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.btn-primary:hover {
+
+    background: #f0d27a;
+    box-shadow:
+        0 12px 35px rgba(220, 182, 94, 0.25);
+}
+
+
+/* Outline */
+
+.btn-outline {
+
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    background:
+        rgba(255, 255, 255, 0.04);
+}
+
+
+.btn-outline:hover {
+
+    border-color: #dcb65e;
+    color: #f0d27a;
+}
+
+
+/* ==================================================
+   SCROLL INDICATOR
+================================================== */
+
+.scroll-indicator {
+
+    position: absolute;
+    z-index: 2;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+
+.scroll-indicator i {
+
+    color: #dcb65e;
+    animation:
+        scrollArrow 1.8s infinite ease-in-out;
+}
+
+
+@keyframes scrollArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+
+/* ==================================================
+   GENERAL SECTIONS
+================================================== */
+
+.section {
+
+    min-height: 70vh;
+    padding: 120px 10%;
+    background:
+        #07100b;
+}
+
+
+.container {
+
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.section-label {
+
+    color: #dcb65e;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+
+.section h2 {
+
+    margin-top: 18px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+
+.section p {
+
+    max-width: 700px;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    padding: 60px 10%;
+    text-align: center;
+    background: #040805;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.footer-logo {
+
+    color: #dcb65e;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+
+footer p {
+
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+}
+
+
+footer .copyright {
+
+    margin-top: 25px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* ==================================================
+   CUSTOM ARROW CURSOR
+================================================== */
+
+body {
+    cursor: none;
+}
+
+
+/* ==================================================
+   ARROW
+================================================== */
+
+.cursor {
+    position: fixed;
+    width: 14px;
+    height: 14px;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-2px, -2px);
+}
+
+
+/* Panah putih */
+
+.cursor::before {
+
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 9px solid #ffffff;
+    transform: rotate(-45deg);
+    filter:
+        drop-shadow(
+            0 0 4px rgba(255,255,255,0.7)
+        );
+}
+
+
+/* ==================================================
+   BENANG MELENGKUNG
+================================================== */
+
+.cursor-thread {
+
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 99998;
+}
+
+
+#threadPath {
+
+    fill: none;
+    stroke: rgba(255,255,255,0.5);
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    filter:
+        drop-shadow(
+            0 0 3px rgba(255,255,255,0.3)
+        );
+}
+
+
+
+/* ==================================================
+   ABOUT SECTION
+   ================================================== */
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Canvas menjadi background */
+
+.about-section #aboutCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: auto;
+}
+
+
+/* Konten berada di atas canvas */
+
+.about-section .about-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 55px;
+    padding-bottom: 90px;
+}
+
+
+/* Label */
+
+.about-section .section-label {
+    position: relative;
+    margin-bottom: 24px;
+    color: #d4a537;
+    letter-spacing: 5px;
+    font-size: 11px;
+}
+
+
+/* Heading */
+
+.about-section h2 {
+    position: relative;
+    max-width: 780px;
+    margin: 0 0 28px;
+    color: #ffffff;
+    font-size: clamp(42px, 5vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -1.5px;
+}
+
+
+/* Description */
+
+.about-section p {
+    position: relative;
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+
+/* ==================================================
+   SERVICES SECTION
+   ================================================== */
+
+.services-section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   SERVICES CANVAS
+   ================================================== */
+
+.services-section #servicesCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: auto;
+}
+
+
+/* ==================================================
+   SERVICES CONTENT
+   ================================================== */
+
+.services-section .services-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 0;
+    padding-bottom: 40px;
+}
+
+
+/* ==================================================
+   SERVICES TEXT
+   ================================================== */
+
+.services-section .section-label {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #dcb65e;
+    letter-spacing: 5px;
+    font-size: 11px;
+}
+
+
+.services-section h2 {
+    position: relative;
+    z-index: 3;
+    max-width: 780px;
+    margin: 0 0 28px;
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 5vw, 56px);
+    line-height: 1.02;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+
+.services-section p {
+    position: relative;
+    z-index: 3;
+    max-width: 650px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+
+/* ==================================================
+   PROJECTS — DESK & PORTFOLIO PREVIEW
+   ================================================== */
+
+.projects-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-stage {
+    position: relative;
+    width: 100%;
+    min-height: 850px;
+}
+
+/* ------ DESK + PREVIEW GROUP ------ */
+.project-showcase {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/* ------ DESK ------ */
+
+.project-desk img {
+    width: 80%;
+    max-width: 600px;
+    min-width: 280px;
+
+    height: auto;
+
+    display: block;
+    object-fit: contain;
+
+    /* Fade keluar ke semua sisi */
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        #000 55%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        #000 55%,
+        transparent 100%
+    );
+}
+
+
+/* ------ PREVIEW ------ */
+
+.project-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ------ LAPTOP SCREEN CLICK AREA ------ */
+
+.project-desk {
+    position: relative;
+}
+
+
+.laptop-screen-hotspot {
+    position: relative;
+    top: 30%;
+    left: 10%;
+    width: 45%;
+    height: 45%;
+    z-index: 20;
+    cursor: pointer;
+}
+
+
+/* ==============================================
+   PROJECT PREVIEW
+   ============================================== */
+
+.project-preview {
+    width: 900px;
+    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+/* ==============================================
+   PREVIEW TRACK
+   ============================================== */
+
+.preview-track {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    transform: translateY(0);
+    transition: transform 4s ease-in-out;
+}
+
+
+/* ==============================================
+   PREVIEW SLIDE
+   ============================================== */
+
+.preview-slide {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+}
+
+
+
+
+
+/* --------------------------
+/* ------ LOGO -------------- */
+
+.logo-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================================
+   AMBIENT SOUND BUTTON
+========================================= */
+
+.ambient-toggle {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    color: #FFFFFF;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Hover */
+.ambient-toggle:hover {
+    transform: scale(1.08);
+    background: rgba(0, 0, 0, 0.65);
+    border-color: #D4AF37;
+}
+
+
+/* Playing state */
+.ambient-toggle.playing {
+    color: #D4AF37;
+}
+
+
+
+
+

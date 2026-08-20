@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<path fill="#68A063" d="M256 38 448 149v214L256 474 64 363V149z"/>
+<text x="256" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="105" fill="white">NODE</text>
+<text x="256" y="375" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="58" fill="white">JS</text>
+</svg>

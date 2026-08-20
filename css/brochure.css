@@ -1,0 +1,262 @@
+/* ==================================================
+   BROCHURE / FLYER CAROUSEL
+   ================================================== */
+
+
+/* ==============================================
+   CAROUSEL AREA
+============================================== */
+
+.brochure-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 150px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    /* Fade bagian kiri dan kanan */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #000 8%,
+        #000 92%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #000 8%,
+        #000 92%,
+        transparent 100%
+    );
+}
+
+
+/* ==============================================
+   THUMBNAIL TRACK
+============================================== */
+
+.brochure-track {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: max-content;
+    height: 100%;
+
+    animation:
+        brochureMove 30s linear infinite;
+}
+
+
+/* ==============================================
+   PAUSE
+============================================== */
+
+.brochure-track.paused {
+    animation-play-state: paused;
+}
+
+/* ==============================================
+   THUMBNAIL
+============================================== */
+
+.brochure-track > img {
+
+    width: 120px !important;
+    height: 80px !important;
+    flex: 0 0 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+
+
+
+
+/* ==============================================
+   THUMBNAIL HOVER
+============================================== */
+
+.brochure-track > img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.65);
+}
+
+
+/* ==============================================
+   MOVEMENT
+============================================== */
+
+@keyframes brochureMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* ==============================================
+   POPUP / MODAL
+============================================== */
+
+.brochure-modal {
+
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+    background:
+        rgba(0, 0, 0, 0.88);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* ==============================================
+   MODAL ACTIVE
+============================================== */
+
+.brochure-modal.active {
+
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==============================================
+   LARGE BROCHURE
+============================================== */
+
+.brochure-modal img {
+
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.8);
+
+    transform: scale(0.9);
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* ==============================================
+   MODAL IMAGE ACTIVE
+============================================== */
+
+.brochure-modal.active img {
+    transform: scale(1);
+}
+
+
+/* ==============================================
+   CLOSE BUTTON
+============================================== */
+
+.brochure-close {
+
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+
+    background:
+        rgba(0, 0, 0, 0.5);
+
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10000;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ==============================================
+   CLOSE BUTTON HOVER
+============================================== */
+
+.brochure-close:hover {
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    transform: rotate(90deg);
+}
+
+
+/* ==============================================
+   MOBILE
+============================================== */
+
+@media (max-width: 768px) {
+
+    .brochure-track > img {
+        width: 100px !important;
+        height: 65px !important;
+        flex: 0 0 100px;
+    }
+
+    .brochure-track {
+        gap: 15px;
+    }
+
+    .brochure-modal {
+        padding: 20px;
+    }
+
+    .brochure-modal img {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+
+
+    .brochure-close {
+        top: 15px;
+        right: 15px;
+    }
+
+}
+
+
+

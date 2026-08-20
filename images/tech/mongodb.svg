@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<path fill="#47A248" d="M256 55c-6 55-42 79-64 119-31 56-22 125 17 165 18 18 35 29 47 37V55z"/>
+<path fill="#3F9142" d="M256 55v321c13-9 31-20 49-40 42-47 46-118 11-171-27-41-55-61-60-110z"/>
+<path fill="#47A248" d="M250 376h12v70h-12z"/>
+<text x="256" y="485" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="48" fill="#47A248">MongoDB</text>
+</svg>

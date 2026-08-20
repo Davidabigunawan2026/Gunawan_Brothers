@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<rect x="42" y="102" width="428" height="308" rx="18" fill="#CB3837"/>
+<rect x="88" y="148" width="336" height="216" fill="white"/>
+<path fill="#CB3837" d="M120 180h272v168h-64V236h-40v112h-64V236h-40v112h-64z"/>
+<text x="256" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="48" fill="#CB3837">npm</text>
+</svg>
