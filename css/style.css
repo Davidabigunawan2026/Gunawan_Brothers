@@ -827,7 +827,7 @@ body {
 .project-desk img {
 
     padding-top: 165px;
-    padding-left: 80px;
+    padding-left: 50px;
     width: 80%;
     max-width: 1000px;
     min-width: 500px;
@@ -880,44 +880,22 @@ body {
 
 
 
-
 /* ==============================================
    PREVIEW TRACK
 ============================================== */
 
 .preview-track {
+
     position: relative;
+
     width: 80vw;
     height: 80vh;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
 }
-
-
-/* ==============================================
-   PREVIEW SLIDE
-============================================== */
-
-.preview-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0;
-    visibility: hidden;
-    transform-origin: center center;
-
-    filter:
-        drop-shadow(
-            0 25px 30px rgba(0, 0, 0, 0.45)
-        );
-
-    pointer-events: none;
-}
-
 
 
 /* ==============================================
@@ -925,29 +903,28 @@ body {
 ============================================== */
 
 .project-preview {
+
     position: absolute;
 
     top: 180px;
     left: 50%;
-
     width: 60vw;
     height: 55vh;
-
     transform: translateX(-50%);
-
     display: flex;
     align-items: center;
     justify-content: center;
 
     overflow: visible;
-
     z-index: 100;
+
 }
 
 
 /* ==============================================
    PREVIEW SLIDE
 ============================================== */
+
 
 .preview-slide {
 
@@ -971,12 +948,17 @@ body {
             0 25px 30px rgba(0, 0, 0, 0.45)
         );
 
-    pointer-events: none;
+    pointer-events: auto;
+    cursor: pointer;
+
+    will-change:
+        transform,
+        opacity;
 }
 
 
 /* ==============================================
-   ACTIVE
+   ACTIVE PAPER
 ============================================== */
 
 .preview-slide.active {
@@ -984,66 +966,69 @@ body {
     visibility: visible;
 
     animation:
-        previewZoom
-        7s
-        ease-in-out
-        forwards;
+        paperFly
+        4s
+        cubic-bezier(0.22, 0.61, 0.36, 1)
+        2s
+        both;
 }
 
 
 
 
-/* ==================================================
-   ZOOM ANIMATION
-================================================== */
+@keyframes paperFly {
 
-@keyframes previewZoom {
-
-    /* =========================
-       0% — SANGAT KECIL
-       ========================= */
+    /* ==========================================
+       0% — MULAI DARI LAPTOP
+       ========================================== */
 
     0% {
 
-        opacity: 0;
+        opacity: 1;
 
         transform:
             translate(-50%, -50%)
-            scale(0.08);
+            translate(32px, -15px)
+            rotate(12deg)
+            scale(0.12);
     }
 
 
-    /* =========================
-       20% — MULAI TERLIHAT
-       ========================= */
+    /* ==========================================
+       15% — MULAI TERBANG
+       ========================================== */
 
-    20% {
+    15% {
 
         opacity: 1;
 
         transform:
             translate(-50%, -50%)
-            scale(0.15);
+            translate(80px, 25px)
+            rotate(90deg)
+            scale(0.20);
     }
 
 
-    /* =========================
-       50% — MEMBESAR
-       ========================= */
+    /* ==========================================
+       40% — TERUS BERPUTAR
+       ========================================== */
 
-    50% {
+    40% {
 
         opacity: 1;
 
         transform:
             translate(-50%, -50%)
-            scale(0.65);
+            translate(160px, 10px)
+            rotate(210deg)
+            scale(0.35);
     }
 
 
-    /* =========================
-       70% — BESAR
-       ========================= */
+    /* ==========================================
+       70% — HAMPIR 1 PUTARAN
+       ========================================== */
 
     70% {
 
@@ -1051,13 +1036,32 @@ body {
 
         transform:
             translate(-50%, -50%)
+            translate(240px, -5px)
+            rotate(330deg)
+            scale(0.70);
+    }
+
+
+    /* ==========================================
+       90% — 1 PUTARAN PENUH
+       25° + 360° = 385°
+       ========================================== */
+
+    90% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            translate(150px, -20px)
+            rotate(385deg)
             scale(1);
     }
 
 
-    /* =========================
-       100% — TETAP
-       ========================= */
+    /* ==========================================
+       100% — LURUS
+       ========================================== */
 
     100% {
 
@@ -1065,8 +1069,11 @@ body {
 
         transform:
             translate(-50%, -50%)
+            translate(150px, -20px)
+            rotate(360deg)
             scale(1);
     }
+
 }
 
 
@@ -1074,10 +1081,8 @@ body {
 
 
 
-
-
-/* --------------------------
-/* ------ LOGO -------------- */
+/* -----------------------------------------------------
+/* ------------------------ LOGO ----------------------- */
 
 .logo-mark img {
     width: 100%;
