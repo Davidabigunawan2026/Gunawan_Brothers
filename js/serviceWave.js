@@ -50,11 +50,10 @@ if (servicesCanvas) {
     // ==================================================
 
     const FABRIC = {
-        r: 210,
-        g: 214,
-        b: 218
+    r: 120,
+    g: 190,
+    b: 220
     };
-
 
     // ==================================================
     // RESIZE
@@ -294,14 +293,14 @@ if (servicesCanvas) {
                 mouse.active
                     ? Math.max(
                         0,
-                        1 - verticalDistance / 340
+                        1 - verticalDistance / 500
                     )
                     : 0;
 
 
             // Garis dasar sangat transparan
             const alpha =
-                0.12 +
+                0.5 +
                 glow * 0.04;
 
             ctx.strokeStyle =
