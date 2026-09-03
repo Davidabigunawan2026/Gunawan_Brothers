@@ -269,7 +269,7 @@
         top: auto;
         left: auto;
 
-        width: 95%;
+        width: 97%;
         height: 300px;
 
         margin: 0 auto;
@@ -320,6 +320,9 @@
 
         flex: 0 0 100%;
         object-fit: contain;
+
+        align-items: center;
+        justify-content: center;
 
         display: block;
         scroll-snap-align: center;
