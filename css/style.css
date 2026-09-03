@@ -975,7 +975,6 @@ body {
 
 
 
-
 @keyframes paperFly {
 
     /* ==========================================
@@ -1020,7 +1019,7 @@ body {
 
         transform:
             translate(-50%, -50%)
-            translate(160px, 10px)
+            translate(100px, 10px)
             rotate(210deg)
             scale(0.35);
     }
@@ -1036,7 +1035,7 @@ body {
 
         transform:
             translate(-50%, -50%)
-            translate(240px, -5px)
+            translate(100px, -5px)
             rotate(330deg)
             scale(0.70);
     }
@@ -1053,7 +1052,7 @@ body {
 
         transform:
             translate(-50%, -50%)
-            translate(150px, -20px)
+            translate(0px, -20px)
             rotate(385deg)
             scale(1);
     }
@@ -1069,7 +1068,7 @@ body {
 
         transform:
             translate(-50%, -50%)
-            translate(150px, -20px)
+            translate(50px, -20px)
             rotate(360deg)
             scale(1);
     }
@@ -1165,7 +1164,7 @@ body {
 
 
     .preview-slide {
-        width: 100%;
+        width: 80%;
         height: 300px;
         object-fit: contain;
     }
