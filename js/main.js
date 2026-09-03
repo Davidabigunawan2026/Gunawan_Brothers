@@ -10,10 +10,10 @@ let mouseY = 0;
 let cursorX = 0;
 let cursorY = 0;
 const points = [];
-const POINT_COUNT = 18;
+const POINT_COUNT = 8;
+
 
 /* Buat titik benang */
-
 for (let i = 0; i < POINT_COUNT; i++) {
 
     points.push({
