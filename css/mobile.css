@@ -1,194 +1,503 @@
-/*==================================================
-MOBILE RESPONSIVE
-Gunawan Brothers Portfolio
-==================================================*/
-
-/*=========================================
-GLOBAL
-=========================================*/
+/* =========================================================
+   MOBILE.CSS
+   Gunawan Brothers Portfolio
+   Mobile / Phone Responsive Styles
+========================================================= */
 
 
-@media screen and (max-width:768px){
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-toggle {
+    display: none;
+}
 
 
-    html{
-        font-size:14px;
+/* =========================================================
+   TABLET / PHONE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    html {
+        scroll-behavior: smooth;
     }
 
-    body{
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    main,
+    section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 70px;
+        padding: 12px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 9999;
+    }
+
+    .logo {
+        max-width: calc(100% - 60px);
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-mark {
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        min-width: 0;
+    }
+
+    .logo-text span {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .logo-text small {
+        display: none;
+    }
+
+
+    /* ---------- HAMBURGER ---------- */
+
+    .mobile-toggle {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 10px;
+        background: rgba(10, 15, 30, 0.75);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 19px;
+        cursor: pointer;
+        flex-shrink: 0;
+        z-index: 10001;
+    }
+
+    .mobile-toggle.active {
+        border-color: rgba(220, 182, 94, 0.75);
+    }
+
+
+    /* ---------- NAV MENU ---------- */
+
+    .nav-menu {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 14px;
+        width: min(250px, calc(100vw - 28px));
+        padding: 12px;
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+
+        background: rgba(7, 13, 28, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+
+        z-index: 10000;
+    }
+
+    .nav-menu.mobile-open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        padding: 13px 14px;
+        border-radius: 9px;
+        font-size: 13px;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-button {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        min-height: 100svh;
+        padding: 100px 22px 60px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 54px);
+        line-height: 1.05;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    /* =====================================================
+       GENERAL SECTIONS
+    ===================================================== */
+
+    .section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section h2 {
+        font-size: clamp(32px, 8vw, 44px);
+        line-height: 1.1;
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .projects-section {
+        overflow: hidden;
+    }
+
+    .projects-heading {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .projects-heading h2 {
+        font-size: clamp(32px, 8vw, 44px);
+    }
+
+    .projects-heading p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .projects-stage {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .project-showcase {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .project-desk {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-desk img {
+        width: 95%;
+        max-width: 600px;
+        min-width: 0;
+        height: auto;
+        padding: 0;
+    }
+
+    .laptop-screen-hotspot {
+        top: auto;
+        left: auto;
         width: 100%;
         height: auto;
-        overflow-x:hidden;
     }
 
-    .container{
-        width:94%;
-        margin:auto;
-    }
-
-
-
-
-    /*=========================================
-    NAVBAR
-    =========================================*/
-
-    nav{
-        padding:15px 20px;
-    }
-
-    .logo{
-        font-size:1.3rem;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-
-    /*=========================================
-    HERO
-    =========================================*/
-
-    .hero{
-        width: 100%;
-        height: auto;
-
-        min-height:auto;
-        padding:120px 0 60px;
-    }
-
-    .hero .container{
-        display:flex;
-        flex-direction:column-reverse;
-        align-items:center;
-        gap:40px;
-    }
-
-    .hero-content{
-        width:100%;
-        text-align:center;
-    }
-
-    .hero-content h1{
-        font-size:2.5rem;
-    }
-
-    .hero-content h2{
-        font-size:1.3rem;
-    }
-
-    .hero-content p{
-        font-size:1rem;
-        line-height:1.8;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-        flex-wrap:wrap;
-    }
-
-    .hero-image{
-        width:100%;
-        display:flex;
-        justify-content:center;
-    }
-
-    .profile-image{
-        width:240px;
-        max-width:80%;
-    }
-
-
-
-    /*=========================================
-    ABOUT
-    =========================================*/
-
-    .about-grid{
-        display:block;
-    }
-
-    .about-image{
-        text-align:center;
-        margin-bottom:40px;
-    }
-
-    .about-content{
-        text-align:center;
-    }
-
-
-    /*=========================================
-    PROJECT
-    =========================================*/
-
-    .projects {
-        display:grid;
-        grid-template-columns:80px minmax(0,1fr);
-        align-items:center;
-        column-gap:15px;
-        row-gap:15px;
-    }
-
-    .projects-stage{
-        margin-bottom:0;
-        width:80px;
-        height:80px;
-    }
-
-    .project-title{
-        margin:0;
-        font-size:1.8rem;
-    }
+    /* Preview berada di bawah meja */
 
     .project-preview {
-        width: 100%;
-        height: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+
+        width: 92%;
+        height: 300px;
+
+        margin: 0 auto;
+        transform: none;
+
+        display: block;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        border-radius: 12px;
+        cursor: grab;
+
+        box-shadow:
+            0 10px 35px rgba(0, 0, 0, 0.45);
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .project-preview::-webkit-scrollbar {
+        display: none;
     }
 
     .preview-track {
+        width: max-content;
+        min-width: 100%;
+        height: 300px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
         gap: 0;
+        transform: none;
+        transition: none;
     }
 
     .preview-slide {
-        height: 220px;   /* sebelumnya 500px */
+        width: 92vw;
+        max-width: 100%;
+        height: 300px;
+
+        flex: 0 0 100%;
+        object-fit: contain;
+
+        display: block;
+        scroll-snap-align: center;
     }
 
-    
+
+    /* =====================================================
+       BROCHURE CAROUSEL
+    ===================================================== */
+
     .brochure-carousel {
         width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .brochure-track img {
+        max-width: 88vw;
         height: auto;
     }
 
-    .brochure-track {
+
+    /* =====================================================
+       TECHNOLOGIES
+    ===================================================== */
+
+    .technologies-section {
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    #contact {
         width: 100%;
-        height: auto;
+        overflow: hidden;
+    }
+
+    #contact .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    #contact h2 {
+        font-size: clamp(34px, 9vw, 48px);
+    }
+
+    #contact p {
+        font-size: 14px;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    #contact form {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #contact input,
+    #contact textarea,
+    #contact button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 16px;
+    }
+
+    #contact textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    #contact button {
+        min-height: 48px;
     }
 
 
+    /* =====================================================
+       AMBIENT SOUND BUTTON
+    ===================================================== */
 
-
-    /*=========================================
-    CONTACT
-    =========================================*/
-
-    .contact-grid{
-        display:block;
-    }
-
-    .contact-info{
-        margin-bottom:30px;
+    .ambient-toggle {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
     }
 
 
-    /*=========================================
-    FOOTER
-    =========================================*/
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
-    footer{
-        text-align:center;
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
     }
 
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .logo-text span {
+        font-size: 12px;
+    }
+
+    .mobile-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .project-preview {
+        width: 94%;
+        height: 270px;
+    }
+
+    .preview-track {
+        height: 270px;
+    }
+
+    .preview-slide {
+        height: 270px;
+    }
+
+    #contact .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .logo-text span {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .project-preview {
+        width: 95%;
+        height: 240px;
+    }
+
+    .preview-track,
+    .preview-slide {
+        height: 240px;
+    }
 }
 
