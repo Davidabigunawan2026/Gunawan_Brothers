@@ -296,7 +296,7 @@
 
     .preview-track {
         width: max-content;
-        min-width: 90%;
+        min-width: 95%;
         height: 300px;
 
         display: flex;
@@ -309,7 +309,7 @@
     }
 
     .preview-slide {
-        width: 90vw;
+        width: 95vw;
         max-width: 90%;
         height: 300px;
 
