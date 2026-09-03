@@ -16,6 +16,8 @@ GLOBAL
     }
 
     body{
+        width: 100%;
+        height: auto;
         overflow-x:hidden;
     }
 
@@ -49,6 +51,9 @@ GLOBAL
     =========================================*/
 
     .hero{
+        width: 100%;
+        height: auto;
+
         min-height:auto;
         padding:120px 0 60px;
     }
