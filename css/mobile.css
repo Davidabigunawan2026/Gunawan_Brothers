@@ -269,7 +269,7 @@
         top: auto;
         left: auto;
 
-        width: 100%;
+        width: 95%;
         height: 300px;
 
         margin: 0 auto;
@@ -281,6 +281,9 @@
 
         border-radius: 12px;
         cursor: grab;
+        align-items: center;
+        justify-content: center;
+
 
         box-shadow:
             0 10px 35px rgba(0, 0, 0, 0.45);
@@ -295,7 +298,7 @@
     }
 
     .preview-track {
-        width: max-content;
+        width: 100%;
         min-width: 100%;
         height: 300px;
 
@@ -310,12 +313,12 @@
     }
 
     .preview-slide {
-        width: 95vw;
-        max-width: 95%;
+        width: 100%;
+        max-width: 100%;
         height: 300px;
-        padding-left: 30px;
+        padding-left: 10px;
 
-        flex: 0 0 90%;
+        flex: 0 0 100%;
         object-fit: contain;
 
         display: block;
