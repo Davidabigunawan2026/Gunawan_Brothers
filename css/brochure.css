@@ -4,7 +4,7 @@
 
 
 /* ==============================================
-   CAROUSEL AREA
+   CAROUSEL AREA  :  POSISI  BROSUR
 ============================================== */
 
 .brochure-carousel {
@@ -12,7 +12,7 @@
     width: 100%;
     max-width: 1200px;
     height: 150px;
-    margin: 40px auto 0;
+    margin: 150px auto 0;
     overflow: hidden;
     cursor: pointer;
 
@@ -80,9 +80,6 @@
         transform 0.3s ease,
         filter 0.3s ease;
 }
-
-
-
 
 
 
@@ -250,11 +247,12 @@
         max-height: 85vh;
     }
 
-
     .brochure-close {
         top: 15px;
         right: 15px;
     }
+
+
 
 }
 
