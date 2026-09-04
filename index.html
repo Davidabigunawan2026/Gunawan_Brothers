@@ -368,7 +368,6 @@
         </div>
 
 
-
     </section>
 
 
@@ -409,7 +408,7 @@
 
                 <div class="technology-grid">
                     <!-- HTML -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="html">
                         <img
                             src="images/tech/html5.png"
                             alt="HTML5"
@@ -421,7 +420,7 @@
 
 
                     <!-- CSS -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="css">
                         <img
                             src="images/tech/css3.png"
                             alt="CSS3"
@@ -433,7 +432,7 @@
 
 
                     <!-- JavaScript -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="js">
                         <img
                             src="images/tech/javascript.png"
                             alt="JavaScript"
@@ -445,7 +444,7 @@
 
 
                     <!-- React -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="react">
                         <img
                             src="images/tech/react.png"
                             alt="React"
@@ -457,7 +456,7 @@
 
 
                     <!-- JSX -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="jsx">
                         <img
                             src="images/tech/jsx.png"
                             alt="JSX"
@@ -469,7 +468,7 @@
 
 
                     <!-- Vue -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="vue">
                         <img
                             src="images/tech/vue.png"
                             alt="Vue.js"
@@ -493,7 +492,7 @@
 
                 <div class="technology-grid">
                     <!-- Node -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="nodejs">
                         <img
                             src="images/tech/nodejs.png"
                             alt="Node.js"
@@ -505,7 +504,7 @@
 
 
                     <!-- Express -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="express">
                         <img
                             src="images/tech/express.png"
                             alt="Express.js"
@@ -517,7 +516,7 @@
 
 
                     <!-- Python -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="python">
                         <img
                             src="images/tech/python.png"
                             alt="Python"
@@ -529,7 +528,7 @@
 
 
                     <!-- REST API -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="restapi">
 
                         <img
                             src="images/tech/rest-api.png"
@@ -554,8 +553,9 @@
                 </h3>
 
                 <div class="technology-grid">
+
                     <!-- SQLite -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="sqlite">
                         <img
                             src="images/tech/sqlite.png"
                             alt="SQLite"
@@ -567,7 +567,7 @@
 
 
                     <!-- MySQL -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="mysql">
                         <img
                             src="images/tech/mysql.png"
                             alt="MySQL"
@@ -579,7 +579,7 @@
 
 
                     <!-- PostgreSQL -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="postgre">
                         <img
                             src="images/tech/postgresql.png"
                             alt="PostgreSQL"
@@ -604,7 +604,7 @@
                 <div class="technology-grid">
 
                     <!-- Git -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="git">
                         <img
                             src="images/tech/git.png"
                             alt="Git"
@@ -616,7 +616,7 @@
 
 
                     <!-- GitHub -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="github">
                         <img
                             src="images/tech/github.png"
                             alt="GitHub"
@@ -628,7 +628,7 @@
 
 
                     <!-- VS Code -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="vscode">
 
                         <img
                             src="images/tech/vscode.png"
@@ -642,7 +642,7 @@
 
 
                     <!-- npm -->
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="npm">
                         <img
                             src="images/tech/npm.png"
                             alt="npm"
@@ -654,8 +654,7 @@
 
 
                     <!-- WordPress -->
-
-                    <div class="technology-card">
+                    <div class="technology-card" data-tech="wordpress">
 
                         <img
                             src="images/tech/wordpress.png"
@@ -671,6 +670,38 @@
 
         </section>
 
+
+        <!-- =========================================
+            TECHNOLOGY POPUP / MODAL
+        ========================================= -->
+
+        <div class="technology-modal">
+
+            <div class="technology-modal-content">
+
+                <button
+                    class="technology-modal-close"
+                    type="button"
+                    aria-label="Close"
+                >
+                    &times;
+                </button>
+
+                <img
+                    class="technology-modal-icon"
+                    src=""
+                    alt=""
+                >
+
+                <h2 class="technology-modal-title"></h2>
+
+                <p class="technology-modal-description"></p>
+
+                <div class="technology-modal-label"></div>
+
+            </div>
+
+        </div>
 
 
 
@@ -747,14 +778,12 @@
     </footer>
 
 
-
-
-
     <!-- JavaScript -->
     <script src="js/aboutWave.js"></script>
     <script src="js/serviceWave.js"></script>
     <script src="js/preview.js"></script>
     <script src="js/brochure.js"></script>
+    <script src="js/technology-popup.js"></script>
 
     <script src="js/main.js"></script>
 
