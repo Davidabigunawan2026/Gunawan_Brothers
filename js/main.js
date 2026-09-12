@@ -183,7 +183,144 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+
 });
+
+
+
+
+/* ==================================================
+   MOBILE NAVIGATION
+================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const mobileToggle =
+        document.querySelector(".mobile-toggle");
+
+    const navMenu =
+        document.querySelector(".nav-menu");
+
+
+    if (!mobileToggle || !navMenu) {
+        return;
+    }
+
+
+    /* ==============================================
+       OPEN / CLOSE MOBILE MENU
+    ============================================== */
+
+    mobileToggle.addEventListener("click", function () {
+
+        navMenu.classList.toggle("mobile-open");
+
+        const isOpen =
+            navMenu.classList.contains("mobile-open");
+
+        mobileToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    });
+
+
+    /* ==============================================
+       CLOSE MENU AFTER CLICKING NAV LINK
+    ============================================== */
+
+    const mobileLinks =
+        navMenu.querySelectorAll("a");
+
+    mobileLinks.forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            navMenu.classList.remove(
+                "mobile-open"
+            );
+
+            mobileToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+});
+
+
+
+
+/* ==================================================
+   LANGUAGE SELECTOR
+================================================== */
+
+const languageSelect =
+    document.getElementById("languageSelect");
+
+
+/* ==================================================
+   CHANGE LANGUAGE
+================================================== */
+
+function changeLanguage(lang) {
+
+    const elements =
+        document.querySelectorAll("[data-en][data-id]");
+
+    elements.forEach(element => {
+
+        element.textContent =
+            element.getAttribute(`data-${lang}`);
+
+    });
+
+}
+
+
+/* ==================================================
+   UPDATE FLAG
+================================================== */
+
+function updateLanguageFlag() {
+
+    if (languageSelect.value === "id") {
+
+        languageSelect.style.backgroundImage =
+            'url("images/ID.png")';
+
+    } else {
+
+        languageSelect.style.backgroundImage =
+            'url("images/EN.png")';
+
+    }
+
+}
+
+
+/* ==================================================
+   LANGUAGE CHANGE
+================================================== */
+
+languageSelect.addEventListener("change", function () {
+
+    changeLanguage(this.value);
+    updateLanguageFlag();
+
+});
+
+
+/* ==================================================
+   INITIAL LANGUAGE
+================================================== */
+
+changeLanguage(languageSelect.value);
+updateLanguageFlag();
 
 
 
