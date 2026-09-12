@@ -68,17 +68,54 @@
         </div>
 
 
+
         <!-- Navigation Menu -->
         <nav class="nav-menu">
 
-            <a href="#home" class="active">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#services">SERVICES</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#technologies">TECHNOLOGIES</a>
-            <a href="#contact">CONTACT</a>
+            <a href="#home" class="active"
+            data-en="HOME"
+            data-id="BERANDA">HOME</a>
+
+            <a href="#about"
+            data-en="ABOUT"
+            data-id="TENTANG">ABOUT</a>
+
+            <a href="#services"
+            data-en="SERVICES"
+            data-id="LAYANAN">SERVICES</a>
+
+            <a href="#projects"
+            data-en="PROJECTS"
+            data-id="PROYEK">PROJECTS</a>
+
+            <a href="#technologies"
+            data-en="TECHNOLOGIES"
+            data-id="TEKNOLOGI">TECHNOLOGIES</a>
+
+            <a href="#contact"
+            data-en="CONTACT"
+            data-id="KONTAK">CONTACT</a>
+
+
+            <!-- Language Selector -->
+            <select id="languageSelect" class="language-select">
+                <option value="id">ID</option>
+                <option value="en">EN</option>
+            </select>
+
 
         </nav>
+
+
+        <!-- Mobile Menu Toggle -->
+        <button
+            class="mobile-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
 
         <!-- Get In Touch -->
@@ -122,32 +159,64 @@
             <!-- Hero Content -->
             <div class="hero-content">
 
-                <span class="hero-label">
+                <span class="hero-label"
+                    data-en="WE BUILD SOLUTIONS"
+                    data-id="KAMI MEMBANGUN SOLUSI">
                     WE BUILD SOLUTIONS
                 </span>
 
+
                 <h1>
-                    We Build Digital
-                    <span>Solutions</span>
-                    That Drive Your Business
+
+                    <span
+                        data-en="We Build Digital"
+                        data-id="Kami Membangun Solusi Digital">
+                        We Build Digital
+                    </span>
+
+                    <span
+                        data-en="Solutions"
+                        data-id="Solusi Yang Mendorong">
+                        Solutions
+                    </span>
+
+                    <span
+                        data-en="That Drive Your Business"
+                        data-id="Bisnis Anda">
+                        That Drive Your Business
+                    </span>
+
                 </h1>
 
-                <p>
+
+
+                <p data-en="Gunawan Brothers is a trusted partner for modern digital solutions, business applications, and reliable database systems."
+                data-id="Gunawan Brothers adalah mitra terpercaya untuk solusi digital modern, aplikasi bisnis, dan sistem database yang handal.">
                     Gunawan Brothers is a trusted partner
                     for modern digital solutions, business applications,
                     and reliable database systems.
                 </p>
 
 
-                <!-- Hero Buttons -->
+
                 <div class="hero-buttons">
 
-                    <a href="#projects" class="btn btn-primary">
+                    <a
+                        href="#projects"
+                        class="btn btn-primary"
+                        data-en="EXPLORE OUR WORK"
+                        data-id="JELAJAHI PROYEK KAMI"
+                    >
                         EXPLORE OUR WORK
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
 
-                    <a href="#services" class="btn btn-outline">
+                    <a
+                        href="#services"
+                        class="btn btn-outline"
+                        data-en="OUR SERVICES"
+                        data-id="LAYANAN KAMI"
+                    >
                         OUR SERVICES
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -159,19 +228,15 @@
 
             <!-- Scroll Indicator -->
             <div class="scroll-indicator">
-
                 <span>SCROLL TO EXPLORE</span>
-
                 <i class="fa-solid fa-chevron-down"></i>
-
             </div>
 
         </section>
 
 
-
-        <!-- =========================================
-             ABOUT SECTION
+        <!-- ========================================= 
+            ABOUT SECTION 
         ========================================== -->
 
         <section id="about" class="section about-section">
@@ -180,30 +245,41 @@
 
             <div class="container about-content">
 
-                <div class="section-label">
+                <div 
+                    class="section-label"
+                    data-en="ABOUT US"
+                    data-id="TENTANG KAMI"
+                >
                     ABOUT US
                 </div>
 
-                <h2>
+                <h2
+                    data-en="Building Digital Solutions That Matter"
+                    data-id="Membangun Solusi Digital Yang Berdampak"
+                >
                     Building Digital Solutions
-                    <br>
                     That Matter
                 </h2>
 
-                <p>
+                <p
+                    data-en="Gunawan Brothers is dedicated to helping companies and organizations achieve digital transformation through modern web technology, business applications, and effective information systems."
+                    data-id="Gunawan Brothers adalah mitra terpercaya untuk membantu perusahaan dan organisasi mencapai transformasi digital melalui teknologi web modern, aplikasi bisnis, dan sistem informasi yang efektif."
+                >
                     Gunawan Brothers is dedicated to helping companies
                     and organizations achieve digital transformation
                     through modern web technology, business applications,
                     and effective information systems.
                 </p>
+
             </div>
+
         </section>
 
 
 
         <!-- =========================================
             SERVICES SECTION
-        ========================================== -->
+        ========================================= -->
 
         <section id="services" class="section services-section">
 
@@ -213,17 +289,24 @@
             <!-- Content -->
             <div class="container services-content">
 
-                <span class="section-label">
+                <span
+                    class="section-label"
+                    data-en="OUR SERVICES"
+                    data-id="LAYANAN KAMI">
                     OUR SERVICES
                 </span>
 
-                <h2>
+
+                <h2
+                    data-en="Digital Solutions For Your Business"
+                    data-id="Solusi Digital Untuk Bisnis Anda">
                     Digital Solutions
-                    <br>
                     For Your Business
                 </h2>
 
-                <p>
+                <p
+                    data-en="We create tailored digital solutions that combine modern technology, business expertise, and thoughtful design to help your organization grow."
+                    data-id="Kami menciptakan solusi digital yang disesuaikan dengan kebutuhan Anda, menggabungkan teknologi modern, keahlian bisnis, dan desain yang tepat untuk membantu organisasi Anda berkembang.">
                     We create tailored digital solutions that combine modern technology,
                     business expertise, and thoughtful design to help your organization grow.
                 </p>
@@ -233,32 +316,43 @@
         </section>
 
 
-    <!-- =========================================
-        PROJECTS SECTION
-    ========================================== -->
 
-    <section id="projects" class="section projects-section">
+        <!-- =========================================
+            PROJECTS SECTION
+        ========================================== -->
 
-        <!-- Soft background -->
-        <div class="projects-blur"></div>
+        <section id="projects" class="section projects-section">
 
-        <!-- Section Title -->
-        <div class="projects-heading">
+            <!-- Soft background -->
+            <div class="projects-blur"></div>
 
-            <span class="section-label">
-                OUR PROJECTS
-            </span>
+            <!-- Section Title -->
+            <div class="projects-heading">
 
-            <h2>
-                Selected Works
-            </h2>
+                <span
+                    class="section-label"
+                    data-en="OUR PROJECTS"
+                    data-id="PROYEK KAMI">
+                    OUR PROJECTS
+                </span>
 
-            <p>
-                Explore a selection of our digital projects, where strategic thinking,
-                modern technology, and refined design come together.
-            </p>
+                <h2
+                    data-en="Selected Works"
+                    data-id="Proyek Pilihan">
+                    Selected Works
+                </h2>
 
-        </div>
+                <p
+                    data-en="Explore a selection of our digital projects, where strategic thinking, modern technology, and refined design come together."
+                    data-id="Jelajahi beberapa proyek digital kami, di mana pemikiran strategis, teknologi modern, dan desain yang tepat berpadu untuk menghasilkan solusi terbaik.">
+                    Explore a selection of our digital projects, where strategic thinking,
+                    modern technology, and refined design come together.
+                </p>
+
+            </div>
+
+
+
 
  
         <!-- =====================================
@@ -374,27 +468,38 @@
 
 
 
-
-
         <!-- =========================================
              TECHNOLOGIES SECTION
         ========================================== -->
+            
+            <section id="technologies" class="section technologies-section">
 
-        <section id="technologies" class="section technologies-section">
+                <!-- Section Heading -->
+                <div class="technologies-heading">
 
-            <!-- Section Heading -->
-            <div class="technologies-heading">
-                <span class="section-label">
-                    TECHNOLOGIES
-                </span>
-                <h2>
-                    Technologies We Use
-                </h2>
-                <p>
-                    Modern technologies used to build reliable,
-                    scalable, and engaging digital solutions.
-                </p>
-            </div>
+                    <span
+                        class="section-label"
+                        data-en="TECHNOLOGIES"
+                        data-id="TEKNOLOGI">
+                        TECHNOLOGIES
+                    </span>
+
+                    <h2
+                        data-en="Technologies We Use"
+                        data-id="Teknologi Yang Kami Gunakan">
+                        Technologies We Use
+                    </h2>
+
+                    <p
+                        data-en="Modern technologies used to build reliable, scalable, and engaging digital solutions."
+                        data-id="Teknologi modern yang digunakan untuk membangun solusi digital yang andal, terukur, dan menarik.">
+                        Modern technologies used to build reliable,
+                        scalable, and engaging digital solutions.
+                    </p>
+
+                </div>
+
+
 
 
             <!-- =====================================
@@ -705,8 +810,6 @@
 
 
 
-
-
         <!-- =========================================
              CONTACT SECTION
         ========================================== -->
@@ -715,13 +818,17 @@
 
             <div class="container">
 
-                <span class="section-label">
+                <span
+                    class="section-label"
+                    data-en="CONTACT"
+                    data-id="KONTAK">
                     CONTACT
                 </span>
 
-                <h2>
+                <h2
+                    data-en="Let's Build Something Great Together"
+                    data-id="Mari Membangun Sesuatu Yang Hebat Bersama">
                     Let's Build Something
-                    <br>
                     Great Together
                 </h2>
 
@@ -729,14 +836,11 @@
                 <p>
 
                     WA :
-
                     <a href="https://wa.me/628123456789?text=Halo%20Gunawan%20Brothers%2C%20saya%20ingin%20menanyakan%20informasi%20produk.">
                         WhatsApp
                     </a>
 
-
                     <br>
-
                     Email :
                     <a
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=davidabigunawan2017@gmail.com&su=Website%20Inquiry%20-%20Gunawan%20Brothers"
@@ -747,14 +851,12 @@
 
                 </p>
 
-
-
-
             </div>
 
         </section>
 
     </main>
+
 
 
 
