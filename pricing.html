@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Pricing & Order | Gunawan Brothers</title>
+
+    <meta name="description"
+          content="Website development packages by Gunawan Brothers. Choose a website package for your business.">
+
+    <link rel="stylesheet" href="css/pricing.css">
+</head>
+
+<body>
+
+    <header class="pricing-header">
+        <a href="index.html" class="logo">
+            GUNAWAN <span>BROTHERS</span>
+        </a>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="pricing.html" class="active">PRICING</a>
+            <a href="index.html#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pricing-hero">
+            <p class="eyebrow">OUR WEB DEVELOPMENT SERVICES</p>
+
+            <h1>Choose Your <span>Website Package</span></h1>
+
+            <p>
+                Professional, responsive, and modern websites
+                designed to help your business grow.
+            </p>
+        </section>
+
+        <section class="pricing-container">
+
+            <article class="pricing-card">
+                <h2>Starter</h2>
+                <p class="description">For small businesses</p>
+
+                <p class="price">
+                    <span>Rp</span>1.500.000
+                </p>
+
+                <p class="period">One-time development fee</p>
+
+                <ul>
+                    <li>1-page landing website</li>
+                    <li>Responsive design</li>
+                    <li>Business profile and services</li>
+                    <li>WhatsApp contact button</li>
+                    <li>Basic on-page SEO</li>
+                </ul>
+
+                <a href="#order" class="order-button"
+                   data-package="Starter">
+                    ORDER STARTER
+                </a>
+            </article>
+
+            <article class="pricing-card featured">
+                <span class="popular">RECOMMENDED</span>
+
+                <h2>Business</h2>
+                <p class="description">For growing businesses</p>
+
+                <p class="price">
+                    <span>Rp</span>3.500.000
+                </p>
+
+                <p class="period">One-time development fee</p>
+
+                <ul>
+                    <li>Up to 5 pages</li>
+                    <li>Custom responsive design</li>
+                    <li>Business and service pages</li>
+                    <li>Contact form</li>
+                    <li>Basic SEO and sitemap</li>
+                </ul>
+
+                <a href="#order" class="order-button"
+                   data-package="Business">
+                    ORDER BUSINESS
+                </a>
+            </article>
+
+            <article class="pricing-card">
+                <h2>Premium</h2>
+                <p class="description">For special requirements</p>
+
+                <p class="price">
+                    <span>Rp</span>6.000.000+
+                </p>
+
+                <p class="period">Starting development fee</p>
+
+                <ul>
+                    <li>Up to 8 pages</li>
+                    <li>Custom visual design</li>
+                    <li>Advanced interactions</li>
+                    <li>Performance optimization</li>
+                    <li>Additional features by agreement</li>
+                </ul>
+
+                <a href="#order" class="order-button"
+                   data-package="Premium">
+                    ORDER PREMIUM
+                </a>
+            </article>
+
+        </section>
+
+        <section class="order-section" id="order">
+            <p class="eyebrow">LET'S WORK TOGETHER</p>
+            <h2>Order Your <span>Website</span></h2>
+
+            <p>
+                Tell us about your project.
+                We will discuss your requirements and quotation.
+            </p>
+
+            <form id="orderForm">
+
+                <label for="customerName">Your Name</label>
+                <input type="text" id="customerName"
+                       placeholder="Enter your name" required>
+
+                <label for="customerEmail">Email Address</label>
+                <input type="email" id="customerEmail"
+                       placeholder="Enter your email" required>
+
+                <label for="websitePackage">Website Package</label>
+                <select id="websitePackage" required>
+                    <option value="">Select a package</option>
+                    <option value="Starter">Starter</option>
+                    <option value="Business">Business</option>
+                    <option value="Premium">Premium</option>
+                </select>
+
+                <label for="projectDetails">Project Details</label>
+                <textarea id="projectDetails" rows="5"
+                    placeholder="Describe the website you need..."
+                    required></textarea>
+
+                <button type="submit" class="order-button">
+                    SEND ORDER VIA WHATSAPP
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Gunawan Brothers. All rights reserved.</p>
+    </footer>
+
+    <script src="js/pricing.js"></script>
+
+</body>
+</html>
+
