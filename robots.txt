@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://davidabigunawan2026.github.io/Gunawan_Brothers/sitemap.xml
