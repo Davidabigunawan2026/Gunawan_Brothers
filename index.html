@@ -2,8 +2,20 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Meta Description -->
+    <meta name="description"
+        content="Gunawan Brothers builds modern websites, responsive business websites, and custom web applications to help businesses grow online.">
+
+    <!-- SEO: Search Engine Indexing -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Browser Theme Color -->
+    <meta name="theme-color" content="#0F172A">
+
 
     <title>Gunawan Brothers | Web Development & Digital Solutions</title>
 
@@ -26,8 +38,9 @@
     <link rel="stylesheet" href="css/technologies.css">
     <link rel="stylesheet" href="css/mobile.css">
 
-
 </head>
+
+
 
 <body>
 
@@ -88,9 +101,35 @@
             data-en="PROJECTS"
             data-id="PROYEK">PROJECTS</a>
 
-            <a href="pricing.html"
+
+        <!-- Pricing Dropdown -->
+        <div class="nav-dropdown">
+
+            <a href="pricing.html" class="nav-dropdown-toggle"
             data-en="PRICING"
-            data-id="HARGA">PRICING</a>
+            data-id="HARGA">
+                PRICING
+                <i class="fas fa-chevron-down"></i>
+            </a>
+
+            <div class="nav-dropdown-menu">
+
+                <a href="pricing.html"
+                data-en="Website Development"
+                data-id="Pembuatan Website">
+                    Website Development
+                </a>
+
+                <a href="seo.html"
+                data-en="SEO Services"
+                data-id="Layanan SEO">
+                    SEO Services
+                </a>
+
+            </div>
+
+        </div>
+
 
             <a href="#technologies"
             data-en="TECHNOLOGIES"
