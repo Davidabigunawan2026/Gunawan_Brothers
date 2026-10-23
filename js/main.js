@@ -255,6 +255,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+const pricingToggle = document.getElementById("pricingToggle");
+const pricingDropdown = document.querySelector(".nav-dropdown");
+
+if (pricingToggle && pricingDropdown) {
+    pricingToggle.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const isOpen = pricingDropdown.classList.toggle("is-open");
+
+        pricingToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!pricingDropdown.contains(event.target)) {
+            pricingDropdown.classList.remove("is-open");
+            pricingToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+}
+
+
+
+
+
 /* ==================================================
    LANGUAGE SELECTOR
 ================================================== */
