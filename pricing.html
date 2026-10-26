@@ -1,17 +1,30 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Website Pricing & Order | Gunawan Brothers</title>
+    <!-- SEO: Page Title -->
+    <title>Website Development Pricing Indonesia | Gunawan Brothers</title>
 
+    <!-- SEO: Meta Description -->
     <meta name="description"
-          content="Website development packages by Gunawan Brothers. Choose a website package for your business.">
+        content="Explore website development packages from Gunawan Brothers. Affordable Starter, Business, and Premium websites with responsive design and WhatsApp ordering.">
 
+    <!-- SEO: Search Engine Indexing -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Browser Theme Color -->
+    <meta name="theme-color" content="#0F172A">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/pricing.css">
 </head>
+
+
 
 <body>
 
@@ -41,7 +54,70 @@
 
         <section class="pricing-container">
 
+
+            <article class="pricing-card featured flyer-card">
+                <span class="popular">PRINT DESIGN</span>
+
+                <h2>Print Flyer Design</h2>
+                <p class="description">
+                    Professional flyer designs for your business promotion
+                </p>
+
+                <div class="flyer-packages">
+
+                    <div class="flyer-package">
+                        <div>
+                            <h3>Basic</h3>
+                            <p>3 Flyer Designs</p>
+                        </div>
+                        <div class="flyer-price">
+                            <strong>Rp 300.000</strong>
+                            <small>Rp 100.000 / design</small>
+                        </div>
+                    </div>
+
+                    <div class="flyer-package">
+                        <div>
+                            <h3>Business</h3>
+                            <p>6 Flyer Designs</p>
+                        </div>
+                        <div class="flyer-price">
+                            <strong>Rp 500.000</strong>
+                            <small>Rp 83.333 / design</small>
+                        </div>
+                    </div>
+
+                    <div class="flyer-package">
+                        <div>
+                            <h3>Premium</h3>
+                            <p>10 Flyer Designs</p>
+                        </div>
+                        <div class="flyer-price">
+                            <strong>Rp 700.000</strong>
+                            <small>Rp 70.000 / design</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <ul>
+                    <li>Custom design based on your content</li>
+                    <li>Print-ready PDF in A4 or A5 size</li>
+                    <li>JPG/PNG files for preview and sharing</li>
+                    <li>Up to 2 minor revisions per design</li>
+                    <li>Printing and delivery costs not included</li>
+                </ul>
+
+                <a href="#order" class="order-button"
+                data-package="Print Flyer Design">
+                    ORDER FLYER DESIGN
+                </a>
+            </article>
+
+
+
             <article class="pricing-card">
+
                 <h2>Starter</h2>
                 <p class="description">For small businesses</p>
 
@@ -53,10 +129,13 @@
 
                 <ul>
                     <li>1-page landing website</li>
-                    <li>Responsive design</li>
+                    <li>Responsive design for mobile and desktop</li>
                     <li>Business profile and services</li>
                     <li>WhatsApp contact button</li>
                     <li>Basic on-page SEO</li>
+                    <li>Free Netlify hosting, subject to Netlify's current
+                        terms, usage limits, and service availability</li>
+                    <li>3 minor revision</li>
                 </ul>
 
                 <a href="#order" class="order-button"
@@ -79,7 +158,7 @@
 
                 <ul>
                     <li>Up to 5 pages</li>
-                    <li>Custom responsive design</li>
+                    <li>Custom responsive design for mobile and desktop</li>
                     <li>Business and service pages</li>
                     <li>Contact form</li>
                     <li>Basic SEO and sitemap</li>
@@ -103,7 +182,7 @@
 
                 <ul>
                     <li>Up to 8 pages</li>
-                    <li>Custom visual design</li>
+                    <li>Custom visual design for mobile and desktop</li>
                     <li>Advanced interactions</li>
                     <li>Performance optimization</li>
                     <li>Additional features by agreement</li>
@@ -137,12 +216,36 @@
                        placeholder="Enter your email" required>
 
                 <label for="websitePackage">Website Package</label>
+
+
                 <select id="websitePackage" required>
                     <option value="">Select a package</option>
-                    <option value="Starter">Starter</option>
-                    <option value="Business">Business</option>
-                    <option value="Premium">Premium</option>
+
+                    <optgroup label="Print Flyer Design">
+                        <option value="Flyer Basic - Rp300.000">
+                            Flyer Basic — 3 Designs — Rp300.000
+                        </option>
+                        <option value="Flyer Business - Rp500.000">
+                            Flyer Business — 6 Designs — Rp500.000
+                        </option>
+                        <option value="Flyer Premium - Rp700.000">
+                            Flyer Premium — 10 Designs — Rp700.000
+                        </option>
+                    </optgroup>
+
+                    <optgroup label="Website Development">
+                        <option value="Starter">
+                            Starter — Rp1.500.000
+                        </option>
+                        <option value="Business">
+                            Business — Rp3.500.000
+                        </option>
+                        <option value="Premium">
+                            Premium — Rp6.000.000+
+                        </option>
+                    </optgroup>
                 </select>
+
 
                 <label for="projectDetails">Project Details</label>
                 <textarea id="projectDetails" rows="5"
