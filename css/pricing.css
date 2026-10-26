@@ -43,7 +43,9 @@ textarea {
     font: inherit;
 }
 
-/* HEADER */
+/* ========================================
+   HEADER
+======================================== */
 
 .pricing-header {
     width: 100%;
@@ -87,7 +89,9 @@ textarea {
     color: var(--gold);
 }
 
-/* HERO */
+/* ========================================
+   HERO
+======================================== */
 
 .pricing-hero {
     padding: 100px 20px 65px;
@@ -124,23 +128,30 @@ textarea {
     color: var(--muted);
 }
 
-/* PRICING CARDS */
+/* ========================================
+   PRICING GRID
+======================================== */
 
 .pricing-container {
-    max-width: 1250px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 20px 25px 100px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
     align-items: stretch;
 }
+
+/* ========================================
+   GENERAL PRICING CARD
+======================================== */
 
 .pricing-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 38px 30px;
+    min-width: 0;
+    padding: 32px 25px;
     background: linear-gradient(
         145deg,
         #171B22,
@@ -155,7 +166,7 @@ textarea {
 }
 
 .pricing-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-5px);
     border-color: var(--gold);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
@@ -180,13 +191,15 @@ textarea {
 .pricing-card h2 {
     font-family: Georgia, serif;
     font-size: 28px;
+    line-height: 1.4;
     color: var(--gold-light);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 .description {
     color: var(--muted);
     font-size: 14px;
+    line-height: 1.7;
 }
 
 .price {
@@ -218,6 +231,7 @@ textarea {
     padding: 9px 0 9px 25px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     font-size: 13px;
+    overflow-wrap: anywhere;
 }
 
 .pricing-card li::before {
@@ -228,13 +242,114 @@ textarea {
     font-weight: bold;
 }
 
-/* BUTTONS */
+/* ========================================
+   PRINT FLYER DESIGN CARD
+======================================== */
+
+.flyer-card {
+    border-color: var(--gold);
+    background: linear-gradient(
+        145deg,
+        #1b1b1b,
+        var(--dark-card)
+    );
+}
+
+.flyer-card h2 {
+    font-size: 27px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.flyer-card .description {
+    margin-bottom: 20px;
+}
+
+/* Individual flyer packages */
+
+.flyer-packages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px 0 20px;
+}
+
+.flyer-package {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 13px 10px;
+    background: rgba(221, 185, 87, 0.06);
+    border: 1px solid rgba(221, 185, 87, 0.2);
+    border-radius: 9px;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.flyer-package:hover {
+    background: rgba(221, 185, 87, 0.12);
+    border-color: var(--gold);
+}
+
+.flyer-package h3 {
+    color: var(--gold-light);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.flyer-package p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.flyer-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.flyer-price strong {
+    color: var(--gold);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.flyer-price small {
+    color: var(--muted);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+/* Flyer features */
+
+.flyer-card ul {
+    padding: 0;
+    margin-bottom: 28px;
+}
+
+.flyer-card li {
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 8px 0 8px 23px;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
 
 .order-button {
     display: block;
     width: 100%;
     margin-top: auto;
-    padding: 14px 16px;
+    padding: 14px 12px;
     text-align: center;
     border: 1px solid var(--gold);
     border-radius: 6px;
@@ -242,7 +357,7 @@ textarea {
     color: #111;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.7px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -252,7 +367,15 @@ textarea {
     color: var(--gold);
 }
 
-/* ORDER FORM */
+.flyer-card .order-button {
+    border-radius: 30px;
+    font-size: 11px;
+    padding: 13px 8px;
+}
+
+/* ========================================
+   ORDER FORM
+======================================== */
 
 .order-section {
     max-width: 760px;
@@ -308,7 +431,9 @@ textarea {
     margin-top: 18px;
 }
 
-/* FOOTER */
+/* ========================================
+   FOOTER
+======================================== */
 
 footer {
     padding: 25px 15px;
@@ -318,17 +443,20 @@ footer {
     font-size: 12px;
 }
 
-/* RESPONSIVE */
+/* ========================================
+   RESPONSIVE: TABLET
+======================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     .pricing-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .pricing-card.featured {
-        transform: none;
+        max-width: 900px;
     }
 }
+
+/* ========================================
+   RESPONSIVE: MOBILE
+======================================== */
 
 @media (max-width: 600px) {
     .pricing-header {
@@ -360,7 +488,7 @@ footer {
     }
 
     .pricing-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         padding: 15px 20px 65px;
         gap: 22px;
     }
@@ -369,8 +497,32 @@ footer {
         padding: 30px 24px;
     }
 
+    .pricing-card.featured {
+        transform: none;
+    }
+
     .price {
         font-size: 30px;
+    }
+
+    .flyer-card {
+        padding: 28px 20px;
+    }
+
+    .flyer-package {
+        padding: 12px 10px;
+    }
+
+    .flyer-package h3 {
+        font-size: 14px;
+    }
+
+    .flyer-price strong {
+        font-size: 13px;
+    }
+
+    .flyer-price small {
+        font-size: 9px;
     }
 
     .order-section {
