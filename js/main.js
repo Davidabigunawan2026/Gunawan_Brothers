@@ -231,8 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ============================================== */
 
     const mobileLinks =
-        navMenu.querySelectorAll("a");
+        navMenu.querySelectorAll(
+            "a:not(.nav-dropdown-toggle)"
+        );
 
+        
     mobileLinks.forEach(link => {
 
         link.addEventListener("click", function () {
