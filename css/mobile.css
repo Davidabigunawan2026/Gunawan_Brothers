@@ -653,3 +653,28 @@
     }
 }
 
+
+
+/* ==================================================
+   DESIGN GALLERY — ARROW CONTROLS
+   Overrides the previous swipe-track layout so that
+   one slide is shown at a time on phones.
+   ================================================== */
+
+@media (max-width: 768px) {
+    .project-preview {
+        overflow: visible;
+        cursor: default;
+    }
+
+    .preview-track {
+        overflow: hidden;
+    }
+
+    .preview-slide,
+    .preview-slide.active {
+        flex: none;
+        padding-left: 8px;
+        scroll-snap-align: none;
+    }
+}
