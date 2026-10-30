@@ -1,200 +1,117 @@
 /* ==================================================
-   PROJECTS — PAPER FLY PREVIEW
+   PROJECTS — PAPER FLY PREVIEW + MANUAL NAVIGATION
    ================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
+    const slides = Array.from(document.querySelectorAll(".preview-slide"));
+    const previousButton = document.querySelector(".preview-prev");
+    const nextButton = document.querySelector(".preview-next");
+    const currentLabel = document.querySelector(".preview-current");
+    const totalLabel = document.querySelector(".preview-total");
 
-    const slides =
-        document.querySelectorAll(".preview-slide");
+    if (!slides.length) return;
 
     let currentIndex = 0;
-
-
-    /* ----------------------------------------------
-       WAKTU ANIMASI
-       ---------------------------------------------- */
-
-    const startDelay = 2000;      // diam di titik awal
-    const flyDuration = 3000;     // durasi paper fly
-    const previewPause = 6000;    // diam setelah 100%
-
-
-    /* ----------------------------------------------
-       TIMER
-    ---------------------------------------------- */
-
     let nextSlideTimer = null;
+    let animationTimers = [];
 
+    const startDelay = 2000;
+    const flyDuration = 4000;
+    const previewPause = 6000;
 
-    /* ----------------------------------------------
-       ANIMASI SATU GAMBAR
-       ---------------------------------------------- */
+    if (totalLabel) totalLabel.textContent = String(slides.length);
 
-    function animateSlide(slide) {
-
-        /* Bersihkan class */
-
-        slide.classList.remove(
-            "paper-start",
-            "paper-fly",
-            "paused"
-        );
-
-
-        /* ------------------------------------------
-           POSISI AWAL
-           ------------------------------------------ */
-
-        slide.classList.add("paper-start");
-
-
-        /* ------------------------------------------
-           SETELAH 2 DETIK
-           MULAI PAPER FLY
-           ------------------------------------------ */
-
-        setTimeout(function () {
-
-            slide.classList.remove("paper-start");
-            slide.classList.add("paper-fly");
-
-        }, startDelay);
-
-
-        /* ------------------------------------------
-           SETELAH FLY SELESAI
-           TUNGGU PREVIEW PAUSE
-           ------------------------------------------ */
-
-        nextSlideTimer = setTimeout(function () {
-
-            showNextSlide();
-
-        }, startDelay + flyDuration + previewPause);
-
-    }
-
-
-    /* ----------------------------------------------
-       TAMPILKAN GAMBAR BERIKUTNYA
-       ---------------------------------------------- */
-
-    function showNextSlide() {
-
-        /* Bersihkan timer sebelumnya */
-
+    function clearTimers() {
         if (nextSlideTimer) {
-
             clearTimeout(nextSlideTimer);
-
             nextSlideTimer = null;
-
         }
 
-
-        /* Hilangkan semua slide */
-
-        slides.forEach(function (slide) {
-
-            slide.classList.remove(
-                "active",
-                "paper-start",
-                "paper-fly",
-                "paused"
-            );
-
-        });
-
-
-        /* Ambil slide sekarang */
-        const currentSlide =
-            slides[currentIndex];
-
-
-        /* Tampilkan */
-        currentSlide.classList.add("active");
-
-
-        /* Jalankan animasi */
-        animateSlide(currentSlide);
-
-
-        /* Pindah index */
-        currentIndex++;
-
-
-        /* Kembali ke gambar pertama */
-        if (currentIndex >= slides.length - 1) {
-
-            currentIndex = 0;
-
-        }
-
+        animationTimers.forEach(clearTimeout);
+        animationTimers = [];
     }
 
+    function updateCounter() {
+        if (currentLabel) currentLabel.textContent = String(currentIndex + 1);
+    }
 
-    /* ----------------------------------------------
-       CLICK = PAUSE / PLAY
-    ---------------------------------------------- */
+    function resetSlideClasses() {
+        slides.forEach(function (slide) {
+            slide.classList.remove("active", "paper-start", "paper-fly", "paused");
+        });
+    }
 
-    slides.forEach(function (slide) {
+    function scheduleNext() {
+        clearTimeout(nextSlideTimer);
+        nextSlideTimer = setTimeout(function () {
+            showSlide(currentIndex + 1, true);
+        }, startDelay + flyDuration + previewPause);
+    }
 
+    function showSlide(index, autoplay) {
+        clearTimers();
+
+        currentIndex = (index + slides.length) % slides.length;
+        resetSlideClasses();
+
+        const activeSlide = slides[currentIndex];
+        activeSlide.classList.add("active", "paper-start");
+        updateCounter();
+
+        // Keep the original paper-fly sequence on desktop.
+        const flyTimer = setTimeout(function () {
+            activeSlide.classList.remove("paper-start");
+            activeSlide.classList.add("paper-fly");
+        }, startDelay);
+        animationTimers.push(flyTimer);
+
+        if (autoplay) scheduleNext();
+    }
+
+    function goPrevious() {
+        showSlide(currentIndex - 1, true);
+    }
+
+    function goNext() {
+        showSlide(currentIndex + 1, true);
+    }
+
+    if (previousButton) {
+        previousButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            goPrevious();
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            goNext();
+        });
+    }
+
+    // Retain the existing click-to-pause / click-to-resume behavior.
+    slides.forEach(function (slide, index) {
         slide.addEventListener("click", function () {
-
-            /* Hanya bisa diklik setelah
-               preview besar */
-
-            if (!slide.classList.contains("paper-fly")) {
-
-                return;
-
-            }
-
-
-            /* PAUSE */
+            if (index !== currentIndex || !slide.classList.contains("paper-fly")) return;
 
             if (!slide.classList.contains("paused")) {
-
                 slide.classList.add("paused");
-
-                /* Hentikan timer gambar berikutnya */
-
                 if (nextSlideTimer) {
-
                     clearTimeout(nextSlideTimer);
                     nextSlideTimer = null;
-
                 }
-
-            }
-
-
-            /* PLAY */
-
-            else {
-
+            } else {
                 slide.classList.remove("paused");
-
-
-                /* Mulai kembali countdown */
-
+                clearTimeout(nextSlideTimer);
                 nextSlideTimer = setTimeout(function () {
-
-                    showNextSlide();
-
+                    showSlide(currentIndex + 1, true);
                 }, previewPause);
-
             }
-
         });
-
     });
 
-
-    /* ----------------------------------------------
-       START
-       ---------------------------------------------- */
-
-    showNextSlide();
-
+    showSlide(0, true);
 });
